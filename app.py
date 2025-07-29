@@ -1,9 +1,14 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+html_content = """
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versace'nin Sitesi</title>
+    <title>Leaxs'ın sitesi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,22 +40,27 @@
 <body>
 
     <header>
-        VERSACE
+       LEAXS SANTO
     </header>
 
     <section id="about">
         <h2>Hakkında</h2>
-        <p>Ben Versace. Burdan kardeşlerime forrr olsun.</p>
+        <p>LEAXS SANTO TEK GERÇEK </p>
     </section>
 
     <section id="contact">
         <h2>İletişim</h2>
-        <p>Instagram: <a href="https://instagram.com/pars.versace" target="_blank">@pars.versace</a></p>
+        <p>Instagram: <a href="https://instagram.com/747leaxs" target="_blank">@747leaxs</a></p>
     </section>
 
     <footer>
-        &copy; 2025 Versace
+        &copy; 2025 Leaxs santo
     </footer>
 
 </body>
 </html>
+"""
+
+@app.route('/')
+def index():
+    return html_content
